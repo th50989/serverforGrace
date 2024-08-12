@@ -20,6 +20,6 @@ app.get('/api/data', (req, res) => {
   console.log("has request");
 });
 
-app.listen(port, () => {
+app.listen(443, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
