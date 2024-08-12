@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.get('/api/data', (req, res) => {
     console.log(req.params);
@@ -20,6 +20,6 @@ app.get('/api/data', (req, res) => {
   console.log("has request");
 });
 
-app.listen(443, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+app.listen(port, () => {
+  console.log("port : ${port}");
 });
